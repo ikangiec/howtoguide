@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @howtolist.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @howtolist.content %>
+</p>
+
+<p>
+  <b>Product:</b>
+  <%= @howtolist.product_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_howtolist_path(@product, @howtolist) %> |
+<%= link_to 'Back', product_path(@product) %>

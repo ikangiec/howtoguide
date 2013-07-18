@@ -1,0 +1,27 @@
+<h1>Listing howtolists</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Product</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @howtolists.each do |howtolist| %>
+  <tr>
+    <td><%= howtolist.title %></td>
+    <td><%= howtolist.content %></td>
+    <td><%= howtolist.product_id %></td>
+    <td><%= link_to 'Show', product_howtolist_path(@product, howtolist) %></td>
+    <td><%= link_to 'Edit', edit_product_howtolist_path(@product, howtolist) %></td>
+    <td><%= link_to 'Destroy', [@product, howtolist], confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Howtolist', new_product_howtolist_path(@parent) %>
